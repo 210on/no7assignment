@@ -1,15 +1,15 @@
 import './scss/main.scss';
 
-import { WaterRenderer } from './js/core/WaterRenderer';
-import { FluidSimulator } from './js/core/FluidSimulator';
-import { MouseHandler } from './js/interaction/MouseHandler';
-import { KeyboardHandler } from './js/interaction/KeyboardHandler';
-import { VoiceHandler } from './js/interaction/VoiceHandler';
-import { AudioAnalyzer } from './js/interaction/AudioAnalyzer';
-import { DebugPanel } from './js/ui/DebugPanel';
-import { IntroOverlay } from './js/ui/IntroOverlay';
-import { TextOverlay } from './js/ui/TextOverlay';
-import { ColorPalette } from './js/ui/ColorPalette';
+import { WaterRenderer } from './core/WaterRenderer';
+import { FluidSimulator } from './core/FluidSimulator';
+import { MouseHandler } from './interaction/MouseHandler';
+import { KeyboardHandler } from './interaction/KeyboardHandler';
+import { VoiceHandler } from './interaction/VoiceHandler';
+import { AudioAnalyzer } from './interaction/AudioAnalyzer';
+import { DebugPanel } from './ui/DebugPanel';
+import { IntroOverlay } from './ui/IntroOverlay';
+import { TextOverlay } from './ui/TextOverlay';
+import { ColorPalette } from './ui/ColorPalette';
 
 const root = document.getElementById('app');
 const waterRenderer = new WaterRenderer(root);
