@@ -1,4 +1,4 @@
-import { COLOR_POOL } from '../interaction/MouseHandler';
+import { COLOR_POOL } from '../interaction/MouseHandler.js';
 
 export class ColorPalette {
   constructor(rootElement, mouseHandler) {
