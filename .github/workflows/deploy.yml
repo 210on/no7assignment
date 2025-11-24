@@ -1,4 +1,4 @@
-name: Deploy website
+name: Deploy Vite to GitHub Pages
 
 on:
   push:
@@ -8,25 +8,32 @@ on:
 permissions:
   contents: read
   pages: write
-  id-token: write
+  id-token: write   # これも必須
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+
+    # ← ここで environment を指定
+    environment:
+      name: github-pages
+
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18
 
-      - name: Install and Build
-        run: |
-          npm install
-          npm run build
+      - name: Install dependencies
+        run: npm install
 
-      - name: Upload artifact
+      - name: Build with Vite
+        run: npm run build
+
+      - name: Upload build artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
