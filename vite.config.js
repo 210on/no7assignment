@@ -10,4 +10,5 @@ export default defineConfig({
     outDir: 'dist',
     sourcemap: true
   }
+  base: '/no7assignment/',
 });
